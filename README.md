@@ -101,4 +101,4 @@ Final permissions = Identity Policy ∩ Permission Boundary.
 
 ⚡ This setup demonstrates how IAM Permission Boundaries can enforce security by restricting permissions granted by identity policies.
 
-AUTHOR : SUYASH DAHITULE
+## AUTHOR : SUYASH DAHITULE
