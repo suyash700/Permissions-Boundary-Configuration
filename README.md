@@ -3,7 +3,8 @@ IAM Permission Boundary Setup — Step-by-Step Guide
 
 This guide explains how to create a Permission Boundary Policy in AWS, attach it to an IAM user, and test that the boundary restricts permissions even when the identity policy is permissive.
 
-Step 1 — Create IAM User Without Permission Boundary
+## Step 1 — Create IAM User Without Permission Boundary
+
 1.1 Create IAM User
 
 Go to IAM Dashboard → Users → Add user
