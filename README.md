@@ -1,4 +1,4 @@
-<img width="1405" height="765" alt="Screenshot 2025-10-07 222811" src="https://github.com/user-attachments/assets/7f20db3a-2ccd-4413-a50f-5b7d57c4709d" /># Permissions-Boundary-Configuration
+## Permissions-Boundary-Configuration
 IAM Permission Boundary Setup — Step-by-Step Guide
 
 This guide explains how to create a Permission Boundary Policy in AWS, attach it to an IAM user, and test that the boundary restricts permissions even when the identity policy is permissive.
