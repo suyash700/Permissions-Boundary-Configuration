@@ -1,4 +1,4 @@
-# Permissions-Boundary-Configuration
+<img width="1405" height="765" alt="Screenshot 2025-10-07 222811" src="https://github.com/user-attachments/assets/7f20db3a-2ccd-4413-a50f-5b7d57c4709d" /># Permissions-Boundary-Configuration
 IAM Permission Boundary Setup — Step-by-Step Guide
 
 This guide explains how to create a Permission Boundary Policy in AWS, attach it to an IAM user, and test that the boundary restricts permissions even when the identity policy is permissive.
@@ -61,7 +61,8 @@ Select the custom policy DenyUserDeletionBoundary as the permission boundary dur
 
 <img width="1919" height="978" alt="Screenshot 2025-10-07 220002" src="https://github.com/user-attachments/assets/39c17fd4-c4e4-4704-b130-8c7e17425dd3" />
 
-Step 4 — Privilege Escalation Test
+## Step 4 — Privilege Escalation Test
+
 4.1 Attempt to delete another IAM user from the AWS IAM dashboard
 
 Result: Deletion fails with an error:
@@ -71,3 +72,32 @@ Result: Deletion fails with an error:
 "User is not authorized to perform iam:DeleteUser on resource"
 
 Observation: The permission boundary overrides the permissions granted by the identity policy.
+
+## Step 5 — Conclusion
+
+The final effective permissions of the IAM user are the intersection of:
+
+Permissions granted by the identity policy
+
+Permissions allowed by the permission boundary
+
+Even though the identity policy was permissive (IAMFullAccess), the permission boundary restricted deletion actions.
+
+## Key Takeaways
+
+Permission Boundaries enforce least privilege and prevent privilege escalation.
+
+Boundaries restrict permissions rather than grant them.
+
+## Additional visuals
+
+<img width="1405" height="765" alt="Screenshot 2025-10-07 222811" src="https://github.com/user-attachments/assets/c7fbc293-9289-4832-b824-a7b29316ec52" />
+
+<img width="1309" height="770" alt="Screenshot 2025-10-07 222829" src="https://github.com/user-attachments/assets/0a7791f8-0dc7-4f57-8638-e4fe8c041528" />
+
+
+Final permissions = Identity Policy ∩ Permission Boundary.
+
+⚡ This setup demonstrates how IAM Permission Boundaries can enforce security by restricting permissions granted by identity policies.
+
+AUTHOR : SUYASH DAHITULE
